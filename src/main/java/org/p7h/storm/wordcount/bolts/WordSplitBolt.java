@@ -38,14 +38,11 @@ public final class WordSplitBolt extends BaseRichBolt {
 	public final void execute(final Tuple input) {
 		final Status status = (Status) input.getValueByField("tweet");
 		final String language = status.getUser().getLang();
-		//Consider only English Language tweets, so that its easy to understand and also less input.
-		if ("en".equalsIgnoreCase(language)) {
-			final String tweet = status.getText().replaceAll("\\p{Punct}", " ").toLowerCase();
-			final String[] words = tweet.replaceAll("\n", " ").split(" ");
-			for (final String word : words) {
-				if (minWordLength < word.length()) {
-					_collector.emit(new Values(language, word));
-				}
+		final String tweet = status.getText().replaceAll("\\p{Punct}", " ").toLowerCase();
+		final String[] words = tweet.replaceAll("\n", " ").split(" ");
+		for (final String word : words) {
+			if (minWordLength < word.length()) {
+				_collector.emit(new Values(language, word));
 			}
 		}
 	}

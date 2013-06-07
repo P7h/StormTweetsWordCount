@@ -8,10 +8,7 @@ import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.topology.base.BaseRichBolt;
 import backtype.storm.tuple.Tuple;
 import com.google.common.base.Supplier;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Multimap;
-import com.google.common.collect.Multimaps;
+import com.google.common.collect.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -100,7 +97,7 @@ public final class WordCountBolt extends BaseRichBolt {
 	    LOGGER.info("At {}, total # of words received in run#{}: {} ", new Date(), runCounter, wordCountTracker.size());
 	    LOGGER.info("\n{}", dumpWordsToLog.toString());
 
-	    // Empty frequency and wordCountTracker Maps for futher iterations.
+	    // Empty frequency and wordCountTracker Maps for further iterations.
         wordCountTracker.clear();
 	    frequencyOfWords.clear();
     }

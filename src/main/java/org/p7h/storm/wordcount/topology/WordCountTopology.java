@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
 public final class WordCountTopology {
 	private static final Logger LOGGER = LoggerFactory.getLogger(WordCountTopology.class);
 
-	public static void main(final String[] args) throws Exception {
+	public static void main(final String[] args) {
 		try {
 			final Config config = new Config();
 			config.setMessageTimeoutSecs(120);
@@ -62,5 +62,4 @@ public final class WordCountTopology {
 		}
 		LOGGER.info("\n*****Please clear your temp folder now!!!*****");
 	}
-
 }

@@ -68,8 +68,8 @@ public final class TwitterSpout extends BaseRichSpout {
 		try {
 			properties.load(TwitterSpout.class.getClassLoader()
 					                .getResourceAsStream(Constants.CONFIG_PROPERTIES_FILE));
-		} catch (final IOException e) {
-			LOGGER.error(e.toString());
+		} catch (final IOException exception) {
+			LOGGER.error(exception.toString());
 		}
 
 		final ConfigurationBuilder twitterConfBuilder = new ConfigurationBuilder();
@@ -94,7 +94,11 @@ public final class TwitterSpout extends BaseRichSpout {
 			Utils.sleep(500);
         } else {
 			//LOGGER.info(status.getUser().getName() + " : " + status.getText());
-			_collector.emit(new Values(status));
+			//Consider only English Language tweets, so that its easy to understand and also comparatively less input.
+			final String language = status.getUser().getLang();
+			if ("en".equalsIgnoreCase(language)) {
+				_collector.emit(new Values(status));
+			}
 		}
 	}
 
@@ -102,13 +106,6 @@ public final class TwitterSpout extends BaseRichSpout {
 	public final void close() {
 		_twitterStream.shutdown();
 	}
-
-	/*@Override
-	public final Map<String, Object> getComponentConfiguration() {
-		final Config config = new Config();
-		config.setMaxTaskParallelism(1);
-		return config;
-	}*/
 
 	@Override
 	public final void ack(final Object id) {

@@ -9,7 +9,8 @@
     <url>http://www.P7h.org</url>
     <name>StormTweetsWordCount</name>
     <description>Application to demonstrate Storm distributed framework by counting the words present in Tweets in
-        real-time.</description>
+        real-time.
+    </description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,10 +18,9 @@
         <storm.version>0.8.2</storm.version>
         <logback.version>1.0.13</logback.version>
         <slf4j.version>1.7.5</slf4j.version>
-        <twitter4j.version>3.0.3</twitter4j.version>
         <joda-time.version>2.2</joda-time.version>
+        <twitter4j.version>3.0.3</twitter4j.version>
         <guava.version>14.0.1</guava.version>
-        <junit.version>4.11</junit.version>
         <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
         <exec-maven-plugin>1.2.1</exec-maven-plugin>
         <maven-jdk-version>1.7</maven-jdk-version>
