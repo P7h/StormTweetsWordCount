@@ -49,7 +49,7 @@ Rest of the required frameworks and libraries are downloaded by Maven as require
 To build and run this topology, you must use Java 1.7.
 
 ### Local Mode:
-Local mode can also be run on Windows environment without installing any specific software or framework as such. *Note*: Please be sure to clear your temp folder as it adds lot of temporary files in every run.<br>
+Local mode can also be run on Windows environment without installing any specific software or framework as such. *Note*: Please be sure to clean your temp folder as it adds lot of temporary files in every run.<br>
 In local mode, this application can be run from command line by invoking:<br>
 
     mvn clean compile exec:java -Dexec.classpathScope=compile -Dexec.mainClass=org.p7h.storm.wordcount.topology.WordCountTopology

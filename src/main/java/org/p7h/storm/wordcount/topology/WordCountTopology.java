@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
 public final class WordCountTopology {
 	private static final Logger LOGGER = LoggerFactory.getLogger(WordCountTopology.class);
 
-	public static void main(final String[] args) {
+	public static final void main(final String[] args) {
 		try {
 			final Config config = new Config();
 			config.setMessageTimeoutSecs(120);
@@ -34,11 +34,11 @@ public final class WordCountTopology {
 			//This is more to reduce the number of words to be processed i.e. for ignoring simple and most used words.
 			topologyBuilder.setBolt("wordsplitbolt", new WordSplitBolt(4))
 					.shuffleGrouping("twitterspout");
-			//Create WordCountBolt with time for logging and count threshold of words.
+			//Create Bolt with the frequency of logging [in seconds] and count threshold of words.
 			topologyBuilder.setBolt("wordcountbolt", new WordCountBolt(30, 9))
 					.shuffleGrouping("wordsplitbolt");
 
-			//submit it to the cluster, or submit it locally
+			//Submit it to the cluster, or submit it locally
 			if (null != args && 0 < args.length) {
 				config.setNumWorkers(3);
 				StormSubmitter.submitTopology(args[0], config, topologyBuilder.createTopology());
@@ -46,7 +46,7 @@ public final class WordCountTopology {
 				config.setMaxTaskParallelism(10);
 				final LocalCluster localCluster = new LocalCluster();
 				localCluster.submitTopology(Constants.TOPOLOGY_NAME, config, topologyBuilder.createTopology());
-				//Sleep for 120 seconds so that we can complete decent processing of tweets.
+				//Run this topology for 120 seconds so that we can complete processing of decent # of tweets.
 				Utils.sleep(120 * 1000);
 
 				LOGGER.info("Shutting down the cluster...");
@@ -60,6 +60,6 @@ public final class WordCountTopology {
 			//Deliberate no op; not required actually.
 			//exception.printStackTrace();
 		}
-		LOGGER.info("\n*****Please clear your temp folder now!!!*****");
+		LOGGER.info("\n\n\n\t\t*****Please clean your temp folder \"{}\" now!!!*****", System.getProperty("java.io.tmpdir"));
 	}
 }
