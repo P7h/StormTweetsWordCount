@@ -4,16 +4,18 @@
     <list default="true" id="b3e93008-6bcb-41bf-9eb0-f5aee8860653" name="Default" comment="" />
     <ignored path="storm-tweets-wordcount.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/WordSplitBolt.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371189766258" ignored="false" />
-    <file path="/TwitterSpout.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371190748211" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTopRetweets/src/main/java/org/p7h/storm/retweets/bolts/RetweetCountBolt.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371190922183" ignored="false" />
-    <file path="/RetweetCountBolt.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371189278928" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTopRetweets/StormTopRetweets.log" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371191597241" ignored="false" />
-    <file path="/WordCountBolt.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371190899080" ignored="false" />
+    <file path="/WordSplitBolt.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371243350782" ignored="false" />
+    <file path="/TwitterSpout.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371230068320" ignored="false" />
+    <file path="$PROJECT_DIR$/../StormTopRetweets/src/main/java/org/p7h/storm/retweets/bolts/RetweetCountBolt.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371249952550" ignored="false" />
+    <file path="/RetweetCountBolt.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371249401443" ignored="false" />
+    <file path="$PROJECT_DIR$/../StormTopRetweets/StormTopRetweets.log" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371249978313" ignored="false" />
+    <file path="/WordCountBolt.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371249872080" ignored="false" />
     <file path="/Test.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371182647177" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTopRetweets/src/main/java/org/p7h/storm/retweets/utils/RetweetCountComparator.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371189910551" ignored="false" />
+    <file path="$PROJECT_DIR$/../StormTopRetweets/src/main/java/org/p7h/storm/retweets/utils/RetweetCountComparator.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371236668043" ignored="false" />
     <file path="/RetweetCountComparator.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371189910551" ignored="false" />
     <file path="$PROJECT_DIR$/../StormTopRetweets/src/main/java/org/p7h/storm/retweets/spouts/TwitterSpout.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371190760440" ignored="false" />
+    <file path="$PROJECT_DIR$/../StormTopRetweets/src/main/java/org/p7h/storm/retweets/utils/RetweetsOrdering.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371239282051" ignored="false" />
+    <file path="/RetweetsOrdering.java" changelist="b3e93008-6bcb-41bf-9eb0-f5aee8860653" time="1371239261401" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,44 @@
     <favorites_list name="storm-tweets-wordcount" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="WordCountBolt.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/bolts/WordCountBolt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="35" selection-start="3230" selection-end="3230" vertical-scroll-proportion="0.44262296">
+              <folding>
+                <element signature="e#2630#2700#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordSplitBolt.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/bolts/WordSplitBolt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="0" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#getOnlyWordsOfMinThresholdLength#0;class#WordSplitBolt#0" expanded="true" />
+                <element signature="e#2631#2856#0" expanded="true" />
+                <element signature="e#2851#2852#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TwitterSpout.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/spouts/TwitterSpout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="26" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="class#1354:1912" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -85,8 +124,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/bolts/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/bolts/WordSplitBolt.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/spouts/TwitterSpout.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/bolts/WordSplitBolt.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/bolts/WordCountBolt.java" />
       </list>
     </option>
@@ -131,8 +170,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,6 +332,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,9 +350,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -388,7 +427,7 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -399,17 +438,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21439394" sideWeight="0.6702619" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21439394" sideWeight="0.6702619" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -483,7 +522,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#2594#2664#0" expanded="true" />
+            <element signature="e#2630#2700#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -492,7 +531,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#2594#2664#0" expanded="true" />
+            <element signature="e#2630#2700#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -501,14 +540,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#2594#2664#0" expanded="true" />
+            <element signature="e#2630#2700#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/bolts/WordSplitBolt.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="14" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.73675764">
+        <state line="14" column="1" selection-start="567" selection-end="567" vertical-scroll-proportion="0.2728732">
           <folding />
         </state>
       </provider>
@@ -520,25 +559,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/utils/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/spouts/TwitterSpout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="1" selection-start="567" selection-end="567" vertical-scroll-proportion="0.2728732">
-          <folding />
+        <state line="25" column="26" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="class#1354:1912" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/spouts/TwitterSpout.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/bolts/WordSplitBolt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="21" selection-start="3487" selection-end="3487" vertical-scroll-proportion="0.48154092">
-          <folding />
+        <state line="32" column="0" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#getOnlyWordsOfMinThresholdLength#0;class#WordSplitBolt#0" expanded="true" />
+            <element signature="e#2631#2856#0" expanded="true" />
+            <element signature="e#2851#2852#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/bolts/WordCountBolt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="13" selection-start="1393" selection-end="1393" vertical-scroll-proportion="0.21967213">
+        <state line="92" column="35" selection-start="3230" selection-end="3230" vertical-scroll-proportion="0.44262296">
           <folding>
-            <element signature="e#2594#2664#0" expanded="true" />
+            <element signature="e#2630#2700#0" expanded="true" />
           </folding>
         </state>
       </provider>

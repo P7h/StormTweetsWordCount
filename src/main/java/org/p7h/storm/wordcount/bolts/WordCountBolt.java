@@ -22,9 +22,13 @@ import org.slf4j.LoggerFactory;
 public final class WordCountBolt extends BaseRichBolt {
 	private static final Logger LOGGER = LoggerFactory.getLogger(WordCountBolt.class);
 	private static final long serialVersionUID = 3422757558728216124L;
-	/** Interval between logging the output. */
+	/**
+	 * Interval between logging the output.
+	 */
 	private final long logIntervalInSeconds;
-	/** Log only the words which crosses this threshold value. */
+	/**
+	 * Log only the words which crosses this threshold value.
+	 */
 	private final long minWordCountThreshold;
 
 	private long runCounter;
@@ -62,7 +66,7 @@ public final class WordCountBolt extends BaseRichBolt {
 	@SuppressWarnings("unchecked")
 	public final void execute(final Tuple input) {
 		final List<String> words = (List<String>) input.getValueByField("words");
-		//Multiset simplifies the process of adding a key to the Map and incrementing the value, etc.
+		//Multiset simplifies the logic of adding a key to the Map and incrementing the value next time, etc redundant steps.
 		this.wordsTrackerMultiset.addAll(words);
 
 		if (logIntervalInSeconds <= stopwatch.elapsed(TimeUnit.SECONDS)) {
@@ -81,18 +85,21 @@ public final class WordCountBolt extends BaseRichBolt {
 		final StringBuilder dumpWordsToLog = new StringBuilder();
 
 		List<String> words;
-	    for (final int key: this.frequencyOfWords.keySet()) {
-		    if (this.minWordCountThreshold < key) {
-			    words = (List<String>) this.frequencyOfWords.get(key);
-			    Collections.sort(words);
-			    dumpWordsToLog.append(key)
-					    .append(" ==> ")
-					    .append(words)
-					    .append("\n");
-		    }
-	    }
+		for (final int key : this.frequencyOfWords.keySet()) {
+			if (this.minWordCountThreshold < key) {
+				words = (List<String>) this.frequencyOfWords.get(key);
+				Collections.sort(words);
+				dumpWordsToLog
+						.append("\t")
+						.append(key)
+						.append(" ==> ")
+						.append(words)
+						.append("\n");
+			}
+		}
 		this.runCounter++;
-	    LOGGER.info("At {}, total # of words received in run#{}: {} ", new Date(), runCounter, wordsTrackerMultiset.size());
+		LOGGER.info("At {}, total # of words received in run#{}: {} ", new Date(), runCounter,
+				           wordsTrackerMultiset.size());
 		LOGGER.info("\n{}", dumpWordsToLog.toString());
 
 		// Empty frequency and wordTracker Maps for further iterations.

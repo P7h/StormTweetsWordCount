@@ -26,14 +26,13 @@ import twitter4j.conf.ConfigurationBuilder;
 public final class TwitterSpout extends BaseRichSpout {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TwitterSpout.class);
 	private static final long serialVersionUID = 8433508540284742678L;
-
 	private SpoutOutputCollector _collector;
-    private LinkedBlockingQueue<Status> _queue;
-    private TwitterStream _twitterStream;
+	private LinkedBlockingQueue<Status> _queue;
+	private TwitterStream _twitterStream;
 
 	@Override
 	public final void open(final Map conf, final TopologyContext context,
-	                 final SpoutOutputCollector collector) {
+	                       final SpoutOutputCollector collector) {
 		this._queue = new LinkedBlockingQueue<>(1000);
 		this._collector = collector;
 
@@ -45,22 +44,27 @@ public final class TwitterSpout extends BaseRichSpout {
 
 			@Override
 			public void onDeletionNotice(final StatusDeletionNotice sdn) {
+				//No-op
 			}
 
 			@Override
 			public void onTrackLimitationNotice(final int i) {
+				//No-op
 			}
 
 			@Override
 			public void onScrubGeo(final long l, final long l1) {
+				//No-op
 			}
 
 			@Override
 			public void onStallWarning(final StallWarning stallWarning) {
+				//No-op
 			}
 
 			@Override
 			public void onException(final Exception e) {
+				//No-op
 			}
 		};
 		//Twitter stream authentication setup
@@ -94,7 +98,7 @@ public final class TwitterSpout extends BaseRichSpout {
 		if (null == status) {
 			//If _queue is empty sleep the spout thread so it doesn't consume resources.
 			Utils.sleep(500);
-        } else {
+		} else {
 			//Consider only English Language tweets, so that we get lesser tweets to process and for simplicity.
 			final String language = status.getUser().getLang();
 			if ("en".equalsIgnoreCase(language)) {
