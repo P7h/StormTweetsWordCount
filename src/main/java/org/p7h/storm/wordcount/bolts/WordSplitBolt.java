@@ -44,12 +44,12 @@ public final class WordSplitBolt extends BaseRichBolt {
 		final String[] words = tweet.replaceAll("\n", " ").split(" ");
 		final List<String> list = new ArrayList<>();
 		for (final String word : words) {
-			if (minWordLength < word.length()) {
+			if (this.minWordLength < word.length()) {
 				list.add(word);
 			}
 		}
-		//Send all words of a tweet in one go.
-		_collector.emit(new Values(list));
+		//Emit all words of a tweet in one go.
+		this._collector.emit(new Values(list));
 	}
 
 	@Override

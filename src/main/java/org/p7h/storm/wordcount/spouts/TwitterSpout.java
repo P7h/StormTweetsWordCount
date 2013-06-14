@@ -81,11 +81,11 @@ public final class TwitterSpout extends BaseRichSpout {
 		configurationBuilder.setOAuthAccessTokenSecret(properties.getProperty(Constants.OATH_ACCESS_TOKEN_SECRET));
 		configurationBuilder.setOAuthConsumerKey(properties.getProperty(Constants.OATH_CONSUMER_KEY));
 		configurationBuilder.setOAuthConsumerSecret(properties.getProperty(Constants.OATH_CONSUMER_SECRET));
-		_twitterStream = new TwitterStreamFactory(configurationBuilder.build()).getInstance();
-		_twitterStream.addListener(statusListener);
+		this._twitterStream = new TwitterStreamFactory(configurationBuilder.build()).getInstance();
+		this._twitterStream.addListener(statusListener);
 
 		//Returns a small random sample of all public statuses.
-		_twitterStream.sample();
+		this._twitterStream.sample();
 	}
 
 	@Override
@@ -95,17 +95,17 @@ public final class TwitterSpout extends BaseRichSpout {
 			//If _queue is empty sleep the spout thread so it doesn't consume resources.
 			Utils.sleep(500);
         } else {
-			//Consider only English Language tweets, so that its easy to understand and also comparatively less input.
+			//Consider only English Language tweets, so that we get lesser tweets to process and for simplicity.
 			final String language = status.getUser().getLang();
 			if ("en".equalsIgnoreCase(language)) {
-				_collector.emit(new Values(status));
+				this._collector.emit(new Values(status));
 			}
 		}
 	}
 
 	@Override
 	public final void close() {
-		_twitterStream.shutdown();
+		this._twitterStream.shutdown();
 	}
 
 	@Override
