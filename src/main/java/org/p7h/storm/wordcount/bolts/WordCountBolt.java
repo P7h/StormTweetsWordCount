@@ -9,6 +9,7 @@ import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.topology.base.BaseRichBolt;
 import backtype.storm.tuple.Tuple;
 import com.google.common.base.Stopwatch;
+import com.google.common.base.Strings;
 import com.google.common.base.Supplier;
 import com.google.common.collect.*;
 import org.slf4j.Logger;
@@ -85,13 +86,20 @@ public final class WordCountBolt extends BaseRichBolt {
 		final StringBuilder dumpWordsToLog = new StringBuilder();
 
 		List<String> words;
+		String keyString;
+		int maxLength = 0;
+		int keyStringLength = 0;
 		for (final int key : this.frequencyOfWords.keySet()) {
+			//Log only the words which have come at least minWordCountThreshold times.
 			if (this.minWordCountThreshold < key) {
+				keyString = String.valueOf(key);
+				keyStringLength = keyString.length();
+				maxLength = (maxLength == 0 ? keyStringLength : maxLength);
 				words = (List<String>) this.frequencyOfWords.get(key);
 				Collections.sort(words);
 				dumpWordsToLog
 						.append("\t")
-						.append(key)
+						.append(Strings.padStart(keyString, (maxLength - keyStringLength), ' '))
 						.append(" ==> ")
 						.append(words)
 						.append("\n");
