@@ -2,10 +2,10 @@
 ----------
 
 ## Introduction
-This repository contains an application which is built to demonstrate an example of Storm distributed framework by counting the words present in Tweets in real-time.
+This repository contains an application for demonstrating Storm distributed framework by counting the words present in Tweets in real-time.
 
-[Storm](http://storm-project.net) is a free and open source distributed realtime computation system, developed at BackType by Nathan Marz and team. It has been open sourced by Twitter [post BackType acquisition] in August, 2011.<br>
-This application has been developed and tested with Storm v0.8.2 on CentOS. Application may or may not work with earlier or later versions than Storm v0.8.2.<br>
+[Storm](http://storm-project.net) is a free and open source distributed real-time computation system, developed at BackType by Nathan Marz and team. It has been open sourced by Twitter [post BackType acquisition] in August, 2011.<br>
+This application has been developed and tested with Storm v0.8.2 on Windows 7 in local mode. Application may or may not work with earlier or later versions than Storm v0.8.2.<br>
 
 This application has been tested in:<br>
 
@@ -15,8 +15,8 @@ This application has been tested in:<br>
 ## Features
 * Application retrieves tweets from Twitter stream (using [Twitter4J](http://twitter4j.org)) and in real-time processes only the English language tweets.<br>
 * It splits each tweets with space as the delimiter and counts all the words present in tweets and finds list of words with highest count in every 30 seconds.
-* After processing, the application logs the count and list of words grouped by their count to the console and also to a log file.<br>
-* As of current day, this codebase has very minimal comments. I will be adding more comments as and when I get time.
+* After processing, the application logs the count and list of words grouped by their count to the console and also to a log file. The threshold of count after which the words are displayed can be configured by modifying [second value of this Constructor invocation](src/main/java/org/p7h/storm/wordcount/topology/WordCountTopology.java#L38).<br>
+* In local mode, topology runs for 2 minutes and then shuts down. Topology run can be updated by modifying [this](src/main/java/org/p7h/storm/wordcount/topology/WordCountTopology.java#L50) value.<br>
 * Also this project has been made compatible with both Eclipse IDE and IntelliJ IDEA. Import the project in your favorite IDE [which has Maven plugin installed] and you can quickly follow the code.
 
 ## Configuration

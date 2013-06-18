@@ -81,10 +81,10 @@ public final class TwitterSpout extends BaseRichSpout {
 		final ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
 		configurationBuilder.setIncludeEntitiesEnabled(true);
 
-		configurationBuilder.setOAuthAccessToken(properties.getProperty(Constants.OATH_ACCESS_TOKEN));
-		configurationBuilder.setOAuthAccessTokenSecret(properties.getProperty(Constants.OATH_ACCESS_TOKEN_SECRET));
-		configurationBuilder.setOAuthConsumerKey(properties.getProperty(Constants.OATH_CONSUMER_KEY));
-		configurationBuilder.setOAuthConsumerSecret(properties.getProperty(Constants.OATH_CONSUMER_SECRET));
+		configurationBuilder.setOAuthAccessToken(properties.getProperty(Constants.OAUTH_ACCESS_TOKEN));
+		configurationBuilder.setOAuthAccessTokenSecret(properties.getProperty(Constants.OAUTH_ACCESS_TOKEN_SECRET));
+		configurationBuilder.setOAuthConsumerKey(properties.getProperty(Constants.OAUTH_CONSUMER_KEY));
+		configurationBuilder.setOAuthConsumerSecret(properties.getProperty(Constants.OAUTH_CONSUMER_SECRET));
 		this._twitterStream = new TwitterStreamFactory(configurationBuilder.build()).getInstance();
 		this._twitterStream.addListener(statusListener);
 
