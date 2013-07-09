@@ -62,7 +62,7 @@ or
 Distributed mode requires a complete and proper Storm Cluster setup. Please refer this [wiki](https://github.com/nathanmarz/storm/wiki/Setting-up-a-Storm-cluster) for setting up a Storm Cluster.<br>
 In distributed mode, after starting Nimbus and Supervisors on individual machines, this application can be executed on the master [or Nimbus] machine by invoking the following on the command line:
 
-    storm jar target/storm-tweets-wordcount-0.1-jar-with-dependencies.jar org.p7h.storm.wordcount.topology.WordCountTopology WordCount
+    storm jar target/storm-tweets-wordcount-0.1.jar org.p7h.storm.wordcount.topology.WordCountTopology WordCount
 
 ## Problems
 If you find any issues, please report them either raising an [issue](https://github.com/P7h/StormTweetsWordCount/issues) here on Github or alert me on my Twitter handle [@P7h](http://twitter.com/P7h). Or even better, please send a [pull request](https://github.com/P7h/StormTweetsWordCount/pulls).
