@@ -1,10 +1,5 @@
 package org.p7h.storm.wordcount.spouts;
 
-import java.io.IOException;
-import java.util.Map;
-import java.util.Properties;
-import java.util.concurrent.LinkedBlockingQueue;
-
 import backtype.storm.spout.SpoutOutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
@@ -18,6 +13,11 @@ import org.slf4j.LoggerFactory;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
+import java.io.IOException;
+import java.util.Map;
+import java.util.Properties;
+import java.util.concurrent.LinkedBlockingQueue;
+
 /**
  * Spout which gets tweets from Twitter using OAuth Credentials.
  *
@@ -25,7 +25,7 @@ import twitter4j.conf.ConfigurationBuilder;
  */
 public final class TwitterSpout extends BaseRichSpout {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TwitterSpout.class);
-	private static final long serialVersionUID = 8433508540284742678L;
+	private static final long serialVersionUID = 8827889881980423640L;
 	private SpoutOutputCollector _collector;
 	private LinkedBlockingQueue<Status> _queue;
 	private TwitterStream _twitterStream;

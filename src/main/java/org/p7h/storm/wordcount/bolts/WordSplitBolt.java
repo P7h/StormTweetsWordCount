@@ -1,8 +1,5 @@
 package org.p7h.storm.wordcount.bolts;
 
-import java.util.List;
-import java.util.Map;
-
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
@@ -19,6 +16,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import twitter4j.Status;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * Splits the tweets into words using space as the delimiter.
  *
@@ -26,7 +26,7 @@ import twitter4j.Status;
  */
 public final class WordSplitBolt extends BaseRichBolt {
 	private static final Logger LOGGER = LoggerFactory.getLogger(WordSplitBolt.class);
-	private static final long serialVersionUID = 4409872016715413315L;
+	private static final long serialVersionUID = -5789520783773808742L;
 
 	private final int minWordLength;
 	private OutputCollector _collector;

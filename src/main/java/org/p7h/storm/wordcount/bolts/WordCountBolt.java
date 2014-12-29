@@ -1,8 +1,5 @@
 package org.p7h.storm.wordcount.bolts;
 
-import java.util.*;
-import java.util.concurrent.TimeUnit;
-
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
@@ -15,6 +12,9 @@ import com.google.common.collect.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+
 /**
  * Counts the words and displays to the console and also logs to the file.
  *
@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
  */
 public final class WordCountBolt extends BaseRichBolt {
 	private static final Logger LOGGER = LoggerFactory.getLogger(WordCountBolt.class);
-	private static final long serialVersionUID = 3422757558728216124L;
+	private static final long serialVersionUID = -306073100275129760L;
 	/**
 	 * Interval between logging the output.
 	 */
@@ -55,8 +55,7 @@ public final class WordCountBolt extends BaseRichBolt {
 				}
 			}
 		);
-		this.stopwatch = new Stopwatch();
-		this.stopwatch.start();
+		this.stopwatch = Stopwatch.createStarted();
 	}
 
 	@Override
